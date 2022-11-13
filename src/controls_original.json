@@ -1,0 +1,105 @@
+{
+  "start": {
+    "response": "Hi! I'm CineBot your movie recommendtion system. May I know your name?",
+    "options": [
+      {
+        "label": "Hey CiniBot ! This is user_name",
+        "gotoKey": "user_name",
+        "contronType": "input"
+      }
+    ]
+  },
+  "user_name": {
+    "response": "Hello user_name, can I know your age for better recommanditon?",
+    "options": [
+      {
+        "label": "My age is user_age !!",
+        "gotoKey": "user_age",
+        "contronType": "input"
+      }
+    ]
+  },
+  "user_age": {
+    "response": "user_age Sweet, Let's see how can I help?",
+    "options": [
+      { "label": "Recommand a Movie", "gotoKey": "recommand_a_movie" }
+    ]
+  },
+  "recommand_a_movie": {
+    "response": "Movie Today seems Perfect, which languages do you Prefer today ?",
+    "options": [
+      { "label": "English", "gotoKey": "english" },
+      { "label": "Hindi", "gotoKey": "hindi" },
+      { "label": "Telugu", "gotoKey": "telugu" }
+    ]
+  },
+  "english": {
+    "response": "Fun Fact, The Hollywood sign once read ‘Hollywoodland",
+    "options": [
+      { "label": "Action", "gotoKey": "english_action" },
+      { "label": "Drama", "gotoKey": "english_drama" },
+      { "label": "Sci-Fi", "gotoKey": "english_scifi" },
+      { "label": "Fantasy", "gotoKey": "english_fantasy" },
+      { "label": "Adventure", "gotoKey": "english_adventure" },
+      { "label": "Comedy", "gotoKey": "english_comdey" },
+      { "label": "Romance", "gotoKey": "english_romance" },
+      { "label": "Crime", "gotoKey": "english_crime" },
+      { "label": "Animation", "gotoKey": "english_animation" },
+      { "label": "Thriller", "gotoKey": "english_thriller" },
+      { "label": "Biography", "gotokey": "english_biography" }
+    ]
+  },
+  "telugu": {
+    "response": "Fun Fact, Tollywood has produced highest number of films in India than any other film industry, BTW,  do you have a prefered Genre",
+    "options": [
+      { "label": "Action", "gotoKey": "telugu_action" },
+      { "label": "Drama", "gotoKey": "telugu_drama" },
+      { "label": "Sci-Fi", "gotoKey": "telugu_scifi" },
+      { "label": "Fantasy", "gotoKey": "telugu_fantasy" },
+      { "label": "Adventure", "gotoKey": "telugu_adventure" },
+      { "label": "Comedy", "gotoKey": "telugu_comdey" },
+      { "label": "Romance", "gotoKey": "telugu_romance" },
+      { "label": "Crime", "gotoKey": "telugu_crime" },
+      { "label": "Thriller", "gotoKey": "telugu_thriller" },
+      { "label": "Biography", "gotokey": "telugu_biography" }
+    ]
+  },
+  "hindi": {
+    "response": "Fun Fact, The first Hindi Movie is filed on 1947, BTW, do you have a prefered Genre",
+    "options": [
+      { "label": "Suspense", "gotoKey": "hindi_suspense" },
+      { "label": "Action", "gotoKey": "hindi_action" },
+      { "label": "Drama", "gotoKey": "hindi_drama" },
+      { "label": "Sci-Fi", "gotoKey": "hindi_scifi" },
+      { "label": "Fantasy", "gotoKey": "hindi_fantasy" },
+      { "label": "Adventure", "gotoKey": "hindi_adventure" },
+      { "label": "Comedy", "gotoKey": "hindi_comdey" },
+      { "label": "Romance", "gotoKey": "hindi_romance" },
+      { "label": "Crime", "gotoKey": "hindi_crime" },
+      { "label": "Thriller", "gotoKey": "hindi_thriller" },
+      { "label": "Biography", "gotokey": "hindi_biography" },
+      { "label": "Musical", "gotoKey": "hindi_musical" }
+    ]
+  },
+
+  "hindi_drama": {
+    "response": "Great, I have these recommandations for you",
+    "options": [],
+    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/hindi_drama.json"
+  },
+  "hindi_thriller": {
+    "response": "Great, I have these recommandations for you",
+    "options": [],
+    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/telugu/action.json"
+  },
+  "hindi_suspense": {
+    "response": "Great, I have these recommandations for you",
+    "options": [{ "label": "Start Over Again", "gotoKey": "start" }],
+    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json"
+  },
+  "hindi_action": {
+    "response": "Great, I have these recommandations for you",
+    "options": [],
+    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json"
+  }
+}
