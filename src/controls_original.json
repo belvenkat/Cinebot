@@ -81,6 +81,173 @@
       { "label": "Musical", "gotoKey": "hindi_musical" }
     ]
   },
+  "english_action":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_drama":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_scifi":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_fantasy":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_adventure":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_comdey":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_romance":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_crime":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_animation":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_thriller":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "english_biography":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_action":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_drama":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_scifi":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_fantasy":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_adventure":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_comdey":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_romance":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_crime":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+
+  "telugu_thriller":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "telugu_biography":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+
+  "hindi_action":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_drama":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_scifi":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_fantasy":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_adventure":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_comdey":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_romance":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_crime":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_musical":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_thriller":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+  "hindi_biography":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+  },
+"hindi_suspense":{
+    "response": "Great, I have these recommandations for you",
+    "options":[],
+    "recommandations":""
+},
 
   "hindi_drama": {
     "response": "Great, I have these recommandations for you",
