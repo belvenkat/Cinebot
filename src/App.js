@@ -35,6 +35,9 @@ export default function App() {
 
   useEffect(() => {
     // 👇️ scroll to bottom every time messages change
+    // fetchFromDatabase(
+    //   "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22crime%22"
+    // );
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     inputRef?.current?.focus({
       cursor: "start",
@@ -42,12 +45,16 @@ export default function App() {
   }, [chatMessages]);
 
   const fetchFromDatabase = (url) => {
-    console.log("🚀 ~ file: App.js ~ line 44 ~ fetchFromDatabase ~ url", url);
     fetch(url)
       .then((res) => res.json())
       .then((res) => {
-        const filteredMovies = getFilteredMovies(url);
-        setRecommandations(Object.keys(res).map((key) => res[key]));
+        const flattendResponse = Object.keys(res).map((key) => res[key]);
+        const filteredMovies = getFilteredMovies(
+          flattendResponse,
+          url,
+          userDetails.user_age
+        );
+        setRecommandations(filteredMovies);
       });
   };
 
@@ -60,6 +67,26 @@ export default function App() {
     return text
       .replace("user_name", userDetails.user_name)
       .replace("user_age", userDetails.user_age);
+  };
+
+  const handleUserTextInput = (e, option) => {
+    if (option.gotoKey === "user_age") {
+      if (!isNaN(e.target.value) && e.target.value <= 100) {
+        setUserDetails((userDetails) => {
+          return {
+            ...userDetails,
+            [option.gotoKey]: e.target.value,
+          };
+        });
+      }
+    } else {
+      setUserDetails((userDetails) => {
+        return {
+          ...userDetails,
+          [option.gotoKey]: e.target.value,
+        };
+      });
+    }
   };
 
   const handleSelection = (botResponse, userResponse) => {
@@ -235,14 +262,7 @@ export default function App() {
                     });
                     handleSelection(controls[option.gotoKey], option);
                   }}
-                  onChange={(e) => {
-                    setUserDetails((userDetails) => {
-                      return {
-                        ...userDetails,
-                        [option.gotoKey]: e.target.value,
-                      };
-                    });
-                  }}
+                  onChange={(e) => handleUserTextInput(e, option)}
                   value={userDetails[option.gotoKey]}
                 />
               </div>
