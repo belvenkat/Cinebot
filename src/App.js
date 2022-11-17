@@ -35,9 +35,9 @@ export default function App() {
 
   useEffect(() => {
     // 👇️ scroll to bottom every time messages change
-    fetchFromDatabase(
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22crime%22"
-    );
+    // fetchFromDatabase(
+    //   "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22crime%22"
+    // );
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     inputRef?.current?.focus({
       cursor: "start",
