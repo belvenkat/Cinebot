@@ -9,7 +9,7 @@ export default (movies, url, user_age) => {
     });
 
   let filteredMovies = [];
-  const seletedGenre = filtersApplieds[2]?.genres.toLowerCase();
+  const seletedGenre = filtersApplied[2]?.genres.toLowerCase();
 
   if (seletedGenre) {
     filteredMovies = movies.filter((movie) => {
