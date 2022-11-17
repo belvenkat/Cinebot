@@ -13,7 +13,7 @@ import {
 } from "antd";
 const { Text } = Typography;
 const { Meta } = Card;
-import controls from "./controls.json";
+import controls from "./controls";
 import MovieCard from "./MovieCard";
 import getFilteredMovies from "./getFilteredMovies";
 
@@ -112,9 +112,11 @@ export default function App() {
   return (
     <div className="App">
       <Modal
+        width={600} // Update Width of modal Here
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleOk}
+        size="large"
         footer={[
           <Button key="back" onClick={handleOk}>
             Back

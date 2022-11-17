@@ -47,7 +47,7 @@ export default (movies, url, user_age) => {
     filteredMovies
   );
 
-  return filteredMovies;
+  return filteredMovies.sort(() => Math.random() - 0.5);
 };
 
 const ageFilter = {

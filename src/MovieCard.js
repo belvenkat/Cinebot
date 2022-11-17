@@ -95,12 +95,16 @@ const MovieCard = ({ selectedMovie }) => {
             flex: 0.5,
             backgroundColor: "#eee",
             alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Image
             width={150}
             src={posterURL}
-            style={{ display: "flex", flex: 1 }}
+            style={{
+              display: "flex",
+              flex: 1,
+            }}
           />
         </div>
         <div
@@ -118,7 +122,6 @@ const MovieCard = ({ selectedMovie }) => {
           <MovieDetails label={"Genres"} value={genres} />
           <MovieDetails label={"Category"} value={category} />
           <MovieDetails label={"IMDB"} value={imdb_rating} />
-
         </div>
       </div>
       <div
