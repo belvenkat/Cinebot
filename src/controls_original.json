@@ -139,7 +139,7 @@
   "telugu_action":{
     "response": "Great, I have these recommandations for you",
     "options":[],
-    "recommandations":""
+    "recommandations":"https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22action%22"
   },
   "telugu_drama":{
     "response": "Great, I have these recommandations for you",
@@ -247,26 +247,5 @@
     "response": "Great, I have these recommandations for you",
     "options":[],
     "recommandations":""
-},
-
-  "hindi_drama": {
-    "response": "Great, I have these recommandations for you",
-    "options": [],
-    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/hindi_drama.json"
-  },
-  "hindi_thriller": {
-    "response": "Great, I have these recommandations for you",
-    "options": [],
-    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/telugu/action.json"
-  },
-  "hindi_suspense": {
-    "response": "Great, I have these recommandations for you",
-    "options": [{ "label": "Start Over Again", "gotoKey": "start" }],
-    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json"
-  },
-  "hindi_action": {
-    "response": "Great, I have these recommandations for you",
-    "options": [],
-    "recommandations": "https://chatbot-movie-ae199-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json"
-  }
+}
 }

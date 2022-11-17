@@ -108,18 +108,17 @@ const MovieCard = ({ selectedMovie }) => {
             flex: 1,
             flexDirection: "column",
             alignItems: "flex-start",
-            padding: 15,
+            padding: 16,
           }}
         >
           <MovieDetails label={"Actor Name"} value={actor_name} />
+          <MovieDetails label={"Actress Name"} value={actress_name} />
+          <MovieDetails label={"Movie Director"} value={director} />
+          <MovieDetails label={"Music Director"} value={music_director} />
           <MovieDetails label={"Genres"} value={genres} />
           <MovieDetails label={"Category"} value={category} />
           <MovieDetails label={"IMDB"} value={imdb_rating} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
+
         </div>
       </div>
       <div

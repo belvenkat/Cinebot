@@ -126,7 +126,7 @@ export default function App() {
                 <Avatar
                   src={
                     <Image
-                      src="https://joeschmoe.io/api/v1/random"
+                      src="https://raw.githubusercontent.com/belvenkat/Cinebot/main/cinebot.jpg"
                       style={{ width: 32 }}
                     />
                   }
