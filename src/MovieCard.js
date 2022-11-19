@@ -122,6 +122,7 @@ const MovieCard = ({ selectedMovie }) => {
           <MovieDetails label={"Genres"} value={genres} />
           <MovieDetails label={"Category"} value={category} />
           <MovieDetails label={"IMDB"} value={imdb_rating} />
+          <MovieDetails label={"Certification"} value={certification}/>
         </div>
       </div>
       <div

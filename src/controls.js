@@ -1,17 +1,17 @@
 const funFacts = {
-  english: [" English your movie recommend", "1", "2", "3"],
-  telugu: [" Telugu your movie recommend", "adsad", "asdsad", "adsadasd"],
-  hindi: [" Hindi your movie recommend", "adsad", "asdsad", "adsadasd"],
+  english: [" WHEN WAS FILM INVENTED? THE 1890S", "THE EARLIEST SHORT FILMS WERE SOMETIMES ACCOMPANIED BY BANDS", "THE PANORAMA SHOT WAS DEVELOPED IN 1987",
+  "EARLY CAMERAS FILMED AT 16 FRAMES PER SECOND (FPS)","13 FRAMES PER SECOND IS THE SLOWEST SPEED THE HUMAN BRAIN WILL PROCESS IMAGES CONSECUTIVELY",],
+  telugu: ["THE FIRST FEATURE-LENGTH FILM WAS PRODUCED IN 1906", "Chiranjeevi Is The First Tollywood And South Indian actor To Be Called For Oscar Awards Presentation ","Brahmanandam into Guiness World Records. Brahmanandam, a legendry actor cum comedian of telugu film industry hold a rare record of screening on highest number of films i.e., 857+ in Guinness books. He is the only male actor in in the industry to hold the record" , "Tollywood's Original Name Was Tollygunje"],
+  hindi: [" Mickey Mouse's original name? Mortimer.", "Many filmmakers felt Thomas Edison held a monopoly on film", "The first drive-in theater opened in 1933", "The largest film market outside the United States is China  "],
 };
 
-const getRandomFunFact = (language = "english") => {
+const getRandomFunFact = (language) => {
   const funFactsBasedonLanguage = funFacts[language];
   return funFactsBasedonLanguage[
     Math.floor(Math.random() * funFactsBasedonLanguage.length)
   ];
 };
 
-getRandomFunFact("english");
 
 const controls = {
   start: {
@@ -65,7 +65,7 @@ const controls = {
     ],
   },
   telugu: {
-    response: `Fun Fact, ${getRandomFunFact("english")}`,
+    response: `Fun Fact, ${getRandomFunFact("telugu")}`,
     options: [
       { label: "Action", gotoKey: "telugu_action" },
       { label: "Drama", gotoKey: "telugu_drama" },
