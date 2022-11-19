@@ -7,9 +7,9 @@ import {
   Card,
   Avatar,
   Typography,
-  Input,
   Image,
   Modal,
+  Input,
 } from "antd";
 const { Text } = Typography;
 const { Meta } = Card;
@@ -19,7 +19,7 @@ import getFilteredMovies from "./getFilteredMovies";
 
 export default function App() {
   const [chatMessages, setChatMessages] = useState([
-    { text: controls.recommand_a_movie.response, isBot: true },
+    { text: controls.start.response, isBot: true },
   ]);
   const [userDetails, setUserDetails] = useState({
     user_name: "",
@@ -109,10 +109,19 @@ export default function App() {
   const handleOk = () => {
     setIsModalOpen(!isModalOpen);
   };
+
+  const handleStartOver = () => {
+    setIsModalOpen(false);
+    setSelectedMovie({});
+    setRecommandations([]);
+    setMessage(controls.recommand_a_movie);
+    setChatMessages([{ text: controls.startover.response, isBot: true }]);
+  };
+
   return (
     <div className="App">
       <Modal
-        width={600} // Update Width of modal Here
+        width={600}
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleOk}
@@ -125,7 +134,7 @@ export default function App() {
             key="submit"
             type="primary"
             // loading={loading}
-            onClick={handleOk}
+            onClick={handleStartOver}
           >
             Start Over
           </Button>,
@@ -168,14 +177,14 @@ export default function App() {
               </div>
             </div>
           ) : (
-            <>
-              <div className="mine messages" key={text}>
+            <div key={text}>
+              <div className="mine messages">
                 <div className="message last">
                   {" "}
                   {getFormattedResponse(text)}
                 </div>
               </div>
-            </>
+            </div>
           );
         })}
         {/* <div className="mine messages">

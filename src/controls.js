@@ -25,6 +25,11 @@ const controls = {
       },
     ],
   },
+  startover: {
+    response:
+      "Thanks for using Cinebot, Hope you enjoyed the movie, Let's see what do you like to see next ?",
+    options: [{ label: "Recommand a Movie", gotoKey: "recommand_a_movie" }],
+  },
   user_name: {
     response: "Hello user_name, can I know your age for better recommanditon?",
     options: [

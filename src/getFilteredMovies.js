@@ -1,5 +1,5 @@
 export default (movies, url, user_age) => {
-  console.table("Movies from API", movies);
+  console.table("Movies from API", movies, user_age);
   let filtersApplied = url
     .split("?")[1]
     .split("&")
@@ -9,17 +9,8 @@ export default (movies, url, user_age) => {
     });
 
   filtersApplied = Object.assign({}, ...filtersApplied);
-  console.log(
-    "🚀 ~ file: getFilteredMovies.js ~ line 12 ~ filtersApplied",
-    filtersApplied
-  );
 
   const seletedGenre = filtersApplied?.genres.toLowerCase();
-  console.log(
-    "🚀 ~ file: getFilteredMovies.js ~ line 15 ~ seletedGenre",
-    seletedGenre
-  );
-
   let filteredMovies = getFilteredMoviesByAge(movies, user_age);
 
   console.log("Movies after Age Filter", filteredMovies);
