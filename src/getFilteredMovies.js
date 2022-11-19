@@ -20,18 +20,7 @@ export default (movies, url, user_age) => {
     seletedGenre
   );
 
-  let filteredMovies = movies.filter((movie) => {
-    if (user_age <= ageFilter.u.age) {
-      if (movie?.certification?.toLowerCase() === ageFilter.u.certification) {
-        return true;
-      }
-    } else if (user_age <= ageFilter.ua.age) {
-      if (movie?.certification?.toLowerCase() === ageFilter.ua.certification) {
-        return true;
-      }
-    }
-    return true;
-  });
+  let filteredMovies = getFilteredMoviesByAge(movies, user_age);
 
   console.log("Movies after Age Filter", filteredMovies);
 
@@ -50,13 +39,34 @@ export default (movies, url, user_age) => {
   return filteredMovies.sort(() => Math.random() - 0.5);
 };
 
-const ageFilter = {
-  u: {
-    certification: "U",
-    age: 12,
-  },
-  ua: {
-    certification: "UA",
-    age: 17,
-  },
+// const ageFilter = {
+//   u: {
+//     certification: "U",
+//     age: 12,
+//   },
+//   ua: {
+//     certification: "UA",
+//     age: 17,
+//   },
+// };
+
+const getFilteredMoviesByAge = (movies, age) => {
+  const filteredMovies = movies.filter((movie) => {
+    if (age > 17) {
+      return true;
+    } else if (age <= 17 && age >= 8) {
+      return (
+        movie.certification.toLowerCase() == "u" ||
+        movie.certification.toLowerCase() == "ua"
+      );
+    } else if (age <= 7) {
+      return movie.certification.toLowerCase() == "u";
+    }
+  });
+
+  return filteredMovies;
 };
+
+// 0 - 7 = U
+// 0 - 17 = U and UA
+// 18 - 99 = U, UA, A
