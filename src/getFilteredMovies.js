@@ -1,5 +1,4 @@
 export default (movies, url, user_age) => {
-  console.table("Movies from API", movies, user_age);
   let filtersApplied = url
     .split("?")[1]
     .split("&")
@@ -30,17 +29,6 @@ export default (movies, url, user_age) => {
   return filteredMovies.sort(() => Math.random() - 0.5);
 };
 
-// const ageFilter = {
-//   u: {
-//     certification: "U",
-//     age: 12,
-//   },
-//   ua: {
-//     certification: "UA",
-//     age: 17,
-//   },
-// };
-
 const getFilteredMoviesByAge = (movies, age) => {
   const filteredMovies = movies.filter((movie) => {
     if (age > 17) {
@@ -57,7 +45,3 @@ const getFilteredMoviesByAge = (movies, age) => {
 
   return filteredMovies;
 };
-
-// 0 - 7 = U
-// 0 - 17 = U and UA
-// 18 - 99 = U, UA, A

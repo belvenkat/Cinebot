@@ -120,6 +120,14 @@ export default function App() {
 
   return (
     <div className="App">
+      <Card
+        style={{
+          // boxShadow: " -2px 3px 7px -3px rgba(0,0,0,0.57)",
+          textAlign: "center",
+        }}
+      >
+        <h1>CineBot </h1>
+      </Card>
       <Modal
         width={600}
         open={isModalOpen}
@@ -127,12 +135,13 @@ export default function App() {
         onCancel={handleOk}
         size="large"
         footer={[
-          <Button key="back" onClick={handleOk}>
+          <Button key="back" onClick={handleOk} shape="round">
             Back
           </Button>,
           <Button
             key="submit"
             type="primary"
+            shape="round"
             // loading={loading}
             onClick={handleStartOver}
           >
@@ -187,112 +196,75 @@ export default function App() {
             </div>
           );
         })}
-        {/* <div className="mine messages">
-          <div className="message last">Dude</div>
-        </div>
-        <div className="yours messages">
-          <div className="message">Hey!</div>
-          <div className="message">You there?</div>
-          <div className="message last">Hello, how's it going?</div>
-        </div>
-        <div className="mine messages">
-          <div className="message">Great thanks!</div>
-          <div className="message last">How about you?</div>
-        </div> */}
-        {/* {chatMessages.map(({ isBot, text }) => {
-          return isBot ? (
-            <List.Item
-              key={text}
-              style={{
-                // background: "coral",
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "center",
-                width: "300px",
-                border: "solid 1px #EEE",
-                flexDirection: "column",
-                padding: "10px"
-              }}
-            >
-              <Avatar>Bot</Avatar>
-              <Text type="secondary" style={{ padding: 10 }}>
-                {getFormattedResponse(text)}
-              </Text>
-            </List.Item>
-          ) : (
-            <List.Item
-              key={text}
-              style={{
-                // background: "yellow",
-                display: "flex",
-                justifyContent: "flex-end",
-                alignItems: "center"
-              }}
-            >
-              <Text type="secondary" style={{ padding: 10 }}>
-                {getFormattedResponse(text)}
-              </Text>
-              <Avatar>{userDetails.user_name[0]}</Avatar>
-            </List.Item>
-          );
-        })} */}
+        <div
+          style={{
+            justifyContent: "flex-end",
+            alignItems: "flex-end",
+            display: "flex",
+            flexWrap: "wrap",
+            marginLeft: "40%",
+          }}
+        >
+          {message.options.map((option) => {
+            if (option.contronType === "input") {
+              return (
+                <div
+                  key={option.gotoKey}
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-end",
+                  }}
+                >
+                  <Input
+                    key={option.gotoKey}
+                    placeholder="type here"
+                    className="user-input"
+                    ref={inputRef}
+                    style={{
+                      //padding: 10,
+                      textAlign: "center",
+                      width: "60%",
+                      borderBottomColor: "black",
+                      borderBottomWidth: "1px",
+                      borderLeft: "none",
+                      borderRight: "none",
+                      borderTop: "none",
+                      outline: "none",
+                    }}
+                    onPressEnter={(e) => {
+                      setUserDetails((userDetails) => {
+                        return {
+                          ...userDetails,
+                          [option.gotoKey]: e.target.value,
+                        };
+                      });
+                      handleSelection(controls[option.gotoKey], option);
+                    }}
+                    onChange={(e) => handleUserTextInput(e, option)}
+                    value={userDetails[option.gotoKey]}
+                  />
+                </div>
+              );
+            }
 
-        {/* <div>Bot: {message.response}</div> */}
-        {message.options.map((option) => {
-          if (option.contronType === "input") {
             return (
-              <div
+              <Button
+                key={option.gotoKey}
+                shape="round"
                 style={{
-                  display: "flex",
-                  justifyContent: "flex-end",
+                  margin: 10,
+                  flex: 1,
+                }}
+                type="primary"
+                onClick={() => {
+                  handleSelection(controls[option.gotoKey], option);
                 }}
               >
-                <Input
-                  key={option.gotoKey}
-                  placeholder="type here"
-                  className="user-input"
-                  ref={inputRef}
-                  style={{
-                    //padding: 10,
-                    textAlign: "center",
-                    width: "40%",
-                    borderBottomColor: "black",
-                    borderBottomWidth: "1px",
-                    borderLeft: "none",
-                    borderRight: "none",
-                    borderTop: "none",
-                    outline: "none",
-                  }}
-                  //bordered={false}
-                  onPressEnter={(e) => {
-                    setUserDetails((userDetails) => {
-                      return {
-                        ...userDetails,
-                        [option.gotoKey]: e.target.value,
-                      };
-                    });
-                    handleSelection(controls[option.gotoKey], option);
-                  }}
-                  onChange={(e) => handleUserTextInput(e, option)}
-                  value={userDetails[option.gotoKey]}
-                />
-              </div>
+                {getFormattedResponse(option.label)}
+              </Button>
             );
-          }
-
-          return (
-            <Button
-              key={option.gotoKey}
-              style={{ margin: 10 }}
-              type="primary"
-              onClick={() => {
-                handleSelection(controls[option.gotoKey], option);
-              }}
-            >
-              {getFormattedResponse(option.label)}
-            </Button>
-          );
-        })}
+          })}
+        </div>
       </div>
       <div
         style={{
