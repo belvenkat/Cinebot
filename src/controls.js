@@ -1,8 +1,23 @@
 const funFacts = {
-  english: [" WHEN WAS FILM INVENTED? THE 1890S", "THE EARLIEST SHORT FILMS WERE SOMETIMES ACCOMPANIED BY BANDS", "THE PANORAMA SHOT WAS DEVELOPED IN 1987",
-  "EARLY CAMERAS FILMED AT 16 FRAMES PER SECOND (FPS)","13 FRAMES PER SECOND IS THE SLOWEST SPEED THE HUMAN BRAIN WILL PROCESS IMAGES CONSECUTIVELY",],
-  telugu: ["THE FIRST FEATURE-LENGTH FILM WAS PRODUCED IN 1906", "Chiranjeevi Is The First Tollywood And South Indian actor To Be Called For Oscar Awards Presentation ","Brahmanandam into Guiness World Records. Brahmanandam, a legendry actor cum comedian of telugu film industry hold a rare record of screening on highest number of films i.e., 857+ in Guinness books. He is the only male actor in in the industry to hold the record" , "Tollywood's Original Name Was Tollygunje"],
-  hindi: [" Mickey Mouse's original name? Mortimer.", "Many filmmakers felt Thomas Edison held a monopoly on film", "The first drive-in theater opened in 1933", "The largest film market outside the United States is China  "],
+  english: [
+    " WHEN WAS FILM INVENTED? THE 1890S",
+    "THE EARLIEST SHORT FILMS WERE SOMETIMES ACCOMPANIED BY BANDS",
+    "THE PANORAMA SHOT WAS DEVELOPED IN 1987",
+    "EARLY CAMERAS FILMED AT 16 FRAMES PER SECOND (FPS)",
+    "13 FRAMES PER SECOND IS THE SLOWEST SPEED THE HUMAN BRAIN WILL PROCESS IMAGES CONSECUTIVELY",
+  ],
+  telugu: [
+    "THE FIRST FEATURE-LENGTH FILM WAS PRODUCED IN 1906",
+    "Chiranjeevi Is The First Tollywood And South Indian actor To Be Called For Oscar Awards Presentation ",
+    "Brahmanandam into Guiness World Records. Brahmanandam, a legendry actor cum comedian of telugu film industry hold a rare record of screening on highest number of films i.e., 857+ in Guinness books. He is the only male actor in in the industry to hold the record",
+    "Tollywood's Original Name Was Tollygunje",
+  ],
+  hindi: [
+    " Mickey Mouse's original name? Mortimer.",
+    "Many filmmakers felt Thomas Edison held a monopoly on film",
+    "The first drive-in theater opened in 1933",
+    "The largest film market outside the United States is China  ",
+  ],
 };
 
 const getRandomFunFact = (language) => {
@@ -11,7 +26,6 @@ const getRandomFunFact = (language) => {
     Math.floor(Math.random() * funFactsBasedonLanguage.length)
   ];
 };
-
 
 const controls = {
   start: {
@@ -31,7 +45,8 @@ const controls = {
     options: [{ label: "Recommend a Movie", gotoKey: "recommend_a_movie" }],
   },
   user_name: {
-    response: "Hello user_name, can I know your age for better recommenditon?",
+    response:
+      "Hello user_name, can I know your age for better recommendations?",
     options: [
       {
         label: "My age is user_age !!",
@@ -66,7 +81,7 @@ const controls = {
       { label: "Crime", gotoKey: "english_crime" },
       { label: "Animation", gotoKey: "english_animation" },
       { label: "Thriller", gotoKey: "english_thriller" },
-      { label: "Biography", gotokey: "english_biography" },
+      { label: "Biography", gotoKey: "english_biography" },
     ],
   },
   telugu: {
@@ -81,7 +96,7 @@ const controls = {
       { label: "Romance", gotoKey: "telugu_romance" },
       { label: "Crime", gotoKey: "telugu_crime" },
       { label: "Thriller", gotoKey: "telugu_thriller" },
-      { label: "Biography", gotokey: "telugu_biography" },
+      { label: "Biography", gotoKey: "telugu_biography" },
     ],
   },
   hindi: {
@@ -97,7 +112,7 @@ const controls = {
       { label: "Romance", gotoKey: "hindi_romance" },
       { label: "Crime", gotoKey: "hindi_crime" },
       { label: "Thriller", gotoKey: "hindi_thriller" },
-      { label: "Biography", gotokey: "hindi_biography" },
+      { label: "Biography", gotoKey: "hindi_biography" },
       { label: "Musical", gotoKey: "hindi_musical" },
     ],
   },

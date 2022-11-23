@@ -31,12 +31,12 @@ export default function App() {
   const [selectedMovie, setSelectedMovie] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
   const bottomRef = useRef(null);
-  const [recommandations, setRecommandations] = useState([]);
+  const [recommendations, setRecommendations] = useState([]);
 
   useEffect(() => {
     // 👇️ scroll to bottom every time messages change
     // fetchFromDatabase(
-    //   "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22crime%22"
+    //   "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22comedy%22"
     // );
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     inputRef?.current?.focus({
@@ -54,7 +54,7 @@ export default function App() {
           url,
           userDetails.user_age
         );
-        setRecommandations(filteredMovies);
+        setRecommendations(filteredMovies);
       });
   };
 
@@ -91,7 +91,7 @@ export default function App() {
 
   const handleSelection = (botResponse, userResponse) => {
     if (!botResponse.options.length) {
-      fetchFromDatabase(botResponse.recommandations);
+      fetchFromDatabase(botResponse.recommendations);
     }
 
     setMessage(botResponse);
@@ -113,8 +113,8 @@ export default function App() {
   const handleStartOver = () => {
     setIsModalOpen(false);
     setSelectedMovie({});
-    setRecommandations([]);
-    setMessage(controls.recommand_a_movie);
+    setRecommendations([]);
+    setMessage(controls.recommend_a_movie);
     setChatMessages([{ text: controls.startover.response, isBot: true }]);
   };
 
@@ -275,11 +275,11 @@ export default function App() {
           overflowX: "scroll",
         }}
       >
-        {recommandations.map(({ posterURL, name, year }, index) => {
+        {recommendations.map(({ posterURL, name, year }, index) => {
           return (
             <Card
               key={name}
-              onClick={() => handleMovieSelection(recommandations[index])}
+              onClick={() => handleMovieSelection(recommendations[index])}
               style={{ margin: 5 }}
               cover={
                 <img

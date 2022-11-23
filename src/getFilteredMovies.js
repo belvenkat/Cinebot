@@ -1,4 +1,10 @@
 export default (movies, url, user_age) => {
+  console.log(
+    "🚀 ~ file: getFilteredMovies.js ~ line 2 ~ movies, url, user_age",
+    movies,
+    url,
+    user_age
+  );
   let filtersApplied = url
     .split("?")[1]
     .split("&")
@@ -6,6 +12,10 @@ export default (movies, url, user_age) => {
       const param = each.replace("%22", "").split("=");
       return { [param[0]]: param[1].replace("%22", "") };
     });
+  console.log(
+    "🚀 ~ file: getFilteredMovies.js ~ line 15 ~ filtersApplied",
+    filtersApplied
+  );
 
   filtersApplied = Object.assign({}, ...filtersApplied);
 
