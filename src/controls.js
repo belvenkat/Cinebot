@@ -28,10 +28,10 @@ const controls = {
   startover: {
     response:
       "Thanks for using Cinebot, Hope you enjoyed the movie, Let's see what do you like to see next ?",
-    options: [{ label: "Recommand a Movie", gotoKey: "recommand_a_movie" }],
+    options: [{ label: "Recommend a Movie", gotoKey: "recommend_a_movie" }],
   },
   user_name: {
-    response: "Hello user_name, can I know your age for better recommanditon?",
+    response: "Hello user_name, can I know your age for better recommenditon?",
     options: [
       {
         label: "My age is user_age !!",
@@ -42,9 +42,9 @@ const controls = {
   },
   user_age: {
     response: "user_age Sweet, Let's see how can I help?",
-    options: [{ label: "Recommand a Movie", gotoKey: "recommand_a_movie" }],
+    options: [{ label: "Recommend a Movie", gotoKey: "recommend_a_movie" }],
   },
-  recommand_a_movie: {
+  recommend_a_movie: {
     response:
       "Movie Today seems Perfect, which languages do you Prefer today ?",
     options: [
@@ -61,7 +61,7 @@ const controls = {
       { label: "Sci-Fi", gotoKey: "english_scifi" },
       { label: "Fantasy", gotoKey: "english_fantasy" },
       { label: "Adventure", gotoKey: "english_adventure" },
-      { label: "Comedy", gotoKey: "english_comdey" },
+      { label: "Comedy", gotoKey: "english_comedy" },
       { label: "Romance", gotoKey: "english_romance" },
       { label: "Crime", gotoKey: "english_crime" },
       { label: "Animation", gotoKey: "english_animation" },
@@ -77,7 +77,7 @@ const controls = {
       { label: "Sci-Fi", gotoKey: "telugu_scifi" },
       { label: "Fantasy", gotoKey: "telugu_fantasy" },
       { label: "Adventure", gotoKey: "telugu_adventure" },
-      { label: "Comedy", gotoKey: "telugu_comdey" },
+      { label: "Comedy", gotoKey: "telugu_comedy" },
       { label: "Romance", gotoKey: "telugu_romance" },
       { label: "Crime", gotoKey: "telugu_crime" },
       { label: "Thriller", gotoKey: "telugu_thriller" },
@@ -93,7 +93,7 @@ const controls = {
       { label: "Sci-Fi", gotoKey: "hindi_scifi" },
       { label: "Fantasy", gotoKey: "hindi_fantasy" },
       { label: "Adventure", gotoKey: "hindi_adventure" },
-      { label: "Comedy", gotoKey: "hindi_comdey" },
+      { label: "Comedy", gotoKey: "hindi_comedy" },
       { label: "Romance", gotoKey: "hindi_romance" },
       { label: "Crime", gotoKey: "hindi_crime" },
       { label: "Thriller", gotoKey: "hindi_thriller" },
@@ -102,203 +102,203 @@ const controls = {
     ],
   },
   english_action: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22action%22",
   },
   english_drama: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22drama%22",
   },
   english_scifi: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22scifi%22",
   },
   english_fantasy: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22fantasy%22",
   },
   english_adventure: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22adventure%22",
   },
-  english_comdey: {
-    response: "Great, I have these recommandations for you",
+  english_comedy: {
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22comdey%22",
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22comedy%22",
   },
   english_romance: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22romance%22",
   },
   english_crime: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22crime%22",
   },
   english_animation: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22animation%22",
   },
   english_thriller: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22thriller%22",
   },
   english_biography: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22biography%22",
   },
   telugu_action: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22action%22",
   },
   telugu_drama: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22drama%22",
   },
   telugu_scifi: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22scifi%22",
   },
   telugu_fantasy: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22fantasy%22",
   },
   telugu_adventure: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22adventure%22",
   },
-  telugu_comdey: {
-    response: "Great, I have these recommandations for you",
+  telugu_comedy: {
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22comdey%22",
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22comedy%22",
   },
   telugu_romance: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22romance%22",
   },
   telugu_crime: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22crime%22",
   },
 
   telugu_thriller: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22thriller%22",
   },
   telugu_biography: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22biography%22",
   },
 
   hindi_action: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22action%22",
   },
   hindi_drama: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22drama%22",
   },
   hindi_scifi: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22scifi%22",
   },
   hindi_fantasy: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22fantasy%22",
   },
   hindi_adventure: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22adventure%22",
   },
-  hindi_comdey: {
-    response: "Great, I have these recommandations for you",
+  hindi_comedy: {
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22comdey%22",
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22comedy%22",
   },
   hindi_romance: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22romance%22",
   },
   hindi_crime: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22crime%22",
   },
   hindi_musical: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22musical%22",
   },
   hindi_thriller: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22thriller%22",
   },
   hindi_biography: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22biography%22",
   },
   hindi_suspense: {
-    response: "Great, I have these recommandations for you",
+    response: "Great, I have these recommendations for you",
     options: [],
-    recommandations:
+    recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22suspense%22",
   },
 };
