@@ -115,8 +115,8 @@ const MovieCard = ({ selectedMovie }) => {
           <MovieDetails label={"Genres"} value={genres} />
           <MovieDetails label={"Category"} value={category} />
           <MovieDetails label={"IMDB"} value={imdb_rating} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
+          <MovieDetails label={"Music Director"} value={music_director} />
+          <MovieDetails label={"Director"} value={director} />
           <MovieDetails label={"Actor Name"} value={actor_name} />
           <MovieDetails label={"Actor Name"} value={actor_name} />
           <MovieDetails label={"Actor Name"} value={actor_name} />
