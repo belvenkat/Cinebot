@@ -23,7 +23,7 @@ export default function App() {
   ]);
   const [userDetails, setUserDetails] = useState({
     user_name: "",
-    user_age: "",
+    user_age: 17,
   });
   const inputRef = useRef(null);
 
@@ -38,10 +38,11 @@ export default function App() {
     // fetchFromDatabase(
     //   "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22comedy%22"
     // );
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
     inputRef?.current?.focus({
       cursor: "start",
     });
+
+    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [chatMessages]);
 
   const fetchFromDatabase = (url) => {
@@ -65,7 +66,10 @@ export default function App() {
 
   const getFormattedResponse = (text) => {
     return text
-      .replace("user_name", userDetails.user_name)
+      .replace(
+        "user_name",
+        userDetails.user_name ? userDetails.user_name : "Movie Buff"
+      )
       .replace("user_age", userDetails.user_age);
   };
 
@@ -271,7 +275,7 @@ export default function App() {
           display: "flex",
           flexDirection: "row",
           background: "#ececec",
-          width: 500,
+          width: 400,
           overflowX: "scroll",
         }}
       >
@@ -294,7 +298,7 @@ export default function App() {
           );
         })}
       </div>
-      <div ref={bottomRef} />
+      <div ref={bottomRef} style={{ height: 150 }} />
     </div>
   );
 }
