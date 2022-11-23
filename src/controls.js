@@ -82,6 +82,7 @@ const controls = {
       { label: "Animation", gotoKey: "english_animation" },
       { label: "Thriller", gotoKey: "english_thriller" },
       { label: "Biography", gotoKey: "english_biography" },
+      { label: "Random", gotoKey: "english_all_movies" },
     ],
   },
   telugu: {
@@ -97,6 +98,7 @@ const controls = {
       { label: "Crime", gotoKey: "telugu_crime" },
       { label: "Thriller", gotoKey: "telugu_thriller" },
       { label: "Biography", gotoKey: "telugu_biography" },
+      { label: "Random", gotoKey: "telugu_all_movies" },
     ],
   },
   hindi: {
@@ -114,6 +116,8 @@ const controls = {
       { label: "Thriller", gotoKey: "hindi_thriller" },
       { label: "Biography", gotoKey: "hindi_biography" },
       { label: "Musical", gotoKey: "hindi_musical" },
+      { label: "Random", gotoKey: "hindi_all_movies" },
+
     ],
   },
   english_action: {
@@ -182,6 +186,13 @@ const controls = {
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22biography%22",
   },
+  english_all_movies: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22",
+  },
+  
   telugu_action: {
     response: "Great, I have these recommendations for you",
     options: [],
@@ -242,6 +253,12 @@ const controls = {
     options: [],
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22biography%22",
+  },
+  telugu_all_movies: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22",
   },
 
   hindi_action: {
@@ -315,6 +332,12 @@ const controls = {
     options: [],
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22suspense%22",
+  },
+  hindi_all_movies: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22",
   },
 };
 
