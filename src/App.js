@@ -285,7 +285,7 @@ export default function App() {
             <Card
               key={name}
               onClick={() => handleMovieSelection(recommendations[index])}
-              style={{ margin: 5 }}
+              style={{ margin: 5, cursor: "pointer" }}
               cover={
                 <img
                   style={{ width: 240, margin: 10, height: 240 }}
