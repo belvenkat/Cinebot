@@ -139,7 +139,7 @@ export default function App() {
         onCancel={handleOk}
         size="large"
         footer={[
-          <Button key="back" onClick={handleOk} shape="round">
+          <Button key="back" onClick={handleOk} shape="round" ref={inputRef}>
             Back
           </Button>,
           <Button
@@ -253,6 +253,7 @@ export default function App() {
 
             return (
               <Button
+                ref={inputRef}
                 key={option.gotoKey}
                 shape="round"
                 style={{
