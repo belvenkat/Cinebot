@@ -139,7 +139,7 @@ export default function App() {
         onCancel={handleOk}
         size="large"
         footer={[
-          <Button key="back" onClick={handleOk} shape="round">
+          <Button key="back" onClick={handleOk} shape="round" ref={inputRef}>
             Back
           </Button>,
           <Button
@@ -253,6 +253,7 @@ export default function App() {
 
             return (
               <Button
+                ref={inputRef}
                 key={option.gotoKey}
                 shape="round"
                 style={{
@@ -284,7 +285,7 @@ export default function App() {
             <Card
               key={name}
               onClick={() => handleMovieSelection(recommendations[index])}
-              style={{ margin: 5 }}
+              style={{ margin: 5, cursor: "pointer" }}
               cover={
                 <img
                   style={{ width: 240, margin: 10, height: 240 }}
