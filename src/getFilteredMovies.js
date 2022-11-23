@@ -19,7 +19,7 @@ export default (movies, url, user_age) => {
 
   filtersApplied = Object.assign({}, ...filtersApplied);
 
-  const seletedGenre = filtersApplied?.genres.toLowerCase();
+  const seletedGenre = filtersApplied?.genres?.toLowerCase();
   let filteredMovies = getFilteredMoviesByAge(movies, user_age);
 
   console.log("Movies after Age Filter", filteredMovies);
