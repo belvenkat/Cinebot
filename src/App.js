@@ -16,6 +16,9 @@ const { Meta } = Card;
 import controls from "./controls";
 import MovieCard from "./MovieCard";
 import getFilteredMovies from "./getFilteredMovies";
+import BotMessage from "./BotMessage";
+import UserMessage from "./UserMessage";
+import getFormattedText from "./getFormattedText";
 
 export default function App() {
   const [chatMessages, setChatMessages] = useState([
@@ -30,8 +33,8 @@ export default function App() {
   const [message, setMessage] = useState(controls.start);
   const [selectedMovie, setSelectedMovie] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const bottomRef = useRef(null);
   const [recommendations, setRecommendations] = useState([]);
+  const bottomRef = useRef(null);
 
   useEffect(() => {
     // 👇️ scroll to bottom every time messages change
@@ -64,15 +67,6 @@ export default function App() {
     setIsModalOpen(true);
   };
 
-  const getFormattedResponse = (text) => {
-    return text
-      .replace(
-        "user_name",
-        userDetails.user_name ? userDetails.user_name : "Movie Buff"
-      )
-      .replace("user_age", userDetails.user_age);
-  };
-
   const handleUserTextInput = (e, option) => {
     if (option.gotoKey === "user_age") {
       if (!isNaN(e.target.value) && e.target.value <= 100) {
@@ -93,16 +87,17 @@ export default function App() {
     }
   };
 
-  const handleSelection = (botResponse, userResponse) => {
-    if (!botResponse.options.length) {
-      fetchFromDatabase(botResponse.recommendations);
+  const handleSelection = (userResponse) => {
+    const botResponseBasedOnuserInput = controls[userResponse.gotoKey];
+    if (!botResponseBasedOnuserInput.options.length) {
+      fetchFromDatabase(botResponseBasedOnuserInput.recommendations);
     }
 
-    setMessage(botResponse);
+    setMessage(botResponseBasedOnuserInput);
     setChatMessages([
       ...chatMessages,
       { text: userResponse.label, isBot: false },
-      { text: botResponse.response, isBot: true },
+      { text: botResponseBasedOnuserInput.response, isBot: true },
     ]);
     window.scrollTo({
       bottom: 0,
@@ -111,7 +106,7 @@ export default function App() {
   };
 
   const handleOk = () => {
-    setIsModalOpen(!isModalOpen);
+    setIsModalOpen(false);
   };
 
   const handleStartOver = () => {
@@ -122,11 +117,30 @@ export default function App() {
     setChatMessages([{ text: controls.startover.response, isBot: true }]);
   };
 
+  const getMessageBubble = (isBot, text) => {
+    if (isBot) {
+      return (
+        <BotMessage
+          text={text}
+          user_name={userDetails.user_name}
+          user_age={userDetails.user_age}
+        />
+      );
+    }
+
+    return (
+      <UserMessage
+        text={text}
+        user_name={userDetails.user_name}
+        user_age={userDetails.user_age}
+      />
+    );
+  };
+
   return (
     <div className="App">
       <Card
         style={{
-          // boxShadow: " -2px 3px 7px -3px rgba(0,0,0,0.57)",
           textAlign: "center",
         }}
       >
@@ -157,48 +171,7 @@ export default function App() {
       </Modal>
       <div className="chat">
         {chatMessages.map(({ isBot, text }) => {
-          return isBot ? (
-            <div
-              key={text}
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignSelf: "flex-end",
-                  zIndex: 10,
-                  margin: 5,
-                }}
-              >
-                <Avatar
-                  src={
-                    <Image
-                      src="https://raw.githubusercontent.com/belvenkat/Cinebot/main/cinebot.jpg"
-                      style={{ width: 32 }}
-                    />
-                  }
-                />
-              </div>
-              <div className="yours messages">
-                <div className="message last">
-                  <div>{getFormattedResponse(text)}</div>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <div key={text}>
-              <div className="mine messages">
-                <div className="message last">
-                  {" "}
-                  {getFormattedResponse(text)}
-                </div>
-              </div>
-            </div>
-          );
+          return getMessageBubble(isBot, text);
         })}
         <div
           style={{
@@ -242,7 +215,8 @@ export default function App() {
                           [option.gotoKey]: e.target.value,
                         };
                       });
-                      handleSelection(controls[option.gotoKey], option);
+                      debugger;
+                      handleSelection(option);
                     }}
                     onChange={(e) => handleUserTextInput(e, option)}
                     value={userDetails[option.gotoKey]}
@@ -262,10 +236,14 @@ export default function App() {
                 }}
                 type="primary"
                 onClick={() => {
-                  handleSelection(controls[option.gotoKey], option);
+                  handleSelection(option);
                 }}
               >
-                {getFormattedResponse(option.label)}
+                {getFormattedText(
+                  option.label,
+                  userDetails.user_name,
+                  userDetails.user_age
+                )}
               </Button>
             );
           })}

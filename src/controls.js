@@ -117,7 +117,6 @@ const controls = {
       { label: "Biography", gotoKey: "hindi_biography" },
       { label: "Musical", gotoKey: "hindi_musical" },
       { label: "Random", gotoKey: "hindi_all_movies" },
-
     ],
   },
   english_action: {
@@ -192,7 +191,7 @@ const controls = {
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22",
   },
-  
+
   telugu_action: {
     response: "Great, I have these recommendations for you",
     options: [],
