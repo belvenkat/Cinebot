@@ -215,7 +215,7 @@ export default function App() {
                           [option.gotoKey]: e.target.value,
                         };
                       });
-                      debugger;
+                      
                       handleSelection(option);
                     }}
                     onChange={(e) => handleUserTextInput(e, option)}

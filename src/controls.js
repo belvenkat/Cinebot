@@ -98,6 +98,8 @@ const controls = {
       { label: "Crime", gotoKey: "telugu_crime" },
       { label: "Thriller", gotoKey: "telugu_thriller" },
       { label: "Biography", gotoKey: "telugu_biography" },
+      { label: "New Release", gotoKey: "telugu_new" },
+      { label: "Old classics", gotoKey: "telugu_old" },
       { label: "Random", gotoKey: "telugu_all_movies" },
     ],
   },
@@ -252,6 +254,20 @@ const controls = {
     options: [],
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22biography%22",
+  },
+  telugu_new:{
+    response:"That's great here are the New Movies released ",
+    options:[],
+    recommendations:
+    "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22new%22",
+    
+  },
+  telugu_old:{
+    response:"That's great here are the New Movies released ",
+    options:[],
+    recommendations:
+    "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22old%22",
+    
   },
   telugu_all_movies: {
     response: "Great, I have these recommendations for you",

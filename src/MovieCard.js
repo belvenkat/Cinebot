@@ -7,7 +7,7 @@ const MovieDetails = ({ label, value }) => {
   return (
     <div style={{ display: "flex", flex: 1 }}>
       <Text
-        style={{ display: "flex", flex: 0.8, justifyContent: "flex-start" }}
+        style={{ display: "flex", flex: 0.6, justifyContent: "flex-start" }}
       >
         {label}
       </Text>
