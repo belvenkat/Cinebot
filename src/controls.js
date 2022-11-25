@@ -104,6 +104,7 @@ const controls = {
       { label: "Thriller", gotoKey: "telugu_thriller" },
       { label: "Biography", gotoKey: "telugu_biography" },
       { label: "Random", gotoKey: "telugu_all_movies" },
+      { label: "vidhya", gotoKey: "telugu_vidhya" },
     ],
   },
   hindi: {
