@@ -6,7 +6,6 @@ export default (movies, url, user_age) => {
       const param = each.replace("%22", "").split("=");
       return { [param[0]]: param[1].replace("%22", "") };
     });
-  debugger;
 
   filtersApplied = Object.assign({}, ...filtersApplied);
 
