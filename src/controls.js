@@ -83,7 +83,12 @@ const controls = {
       { label: "Thriller", gotoKey: "english_thriller" },
       { label: "Biography", gotoKey: "english_biography" },
       { label: "Random", gotoKey: "english_all_movies" },
+      { label: "bhargavi", gotoKey: "english_bhargavi" },
     ],
+  },
+  english_bhargavi:{
+    response:"hi iam bhargavi",
+    options:[],
   },
   telugu: {
     response: `Fun Fact, ${getRandomFunFact("telugu")}`,
