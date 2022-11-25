@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://belvenkat.github.io/cinebot",
+  "homepage": "https://belvenkat.github.io/Cinebot",
   "dependencies": {
     "antd": "4.23.6",
     "react": "18.2.0",

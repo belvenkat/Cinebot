@@ -3,7 +3,7 @@ const icons = {
   prime:
     "https://www.citypng.com/public/uploads/preview/-1159629574507zqo9azzc.png",
   zee5: "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Zee5_Official_logo.svg/1200px-Zee5_Official_logo.svg.png",
-  hotstart:
+  hotstar:
     "https://www.freelogovectors.net/wp-content/uploads/2021/12/disneyplus-hotstar-logo-freelogovectors.net_.png",
   netflix:
     "https://www.citypng.com/public/uploads/preview/-11594687246vzsjesy7bd.png",
