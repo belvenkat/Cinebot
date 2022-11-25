@@ -77,11 +77,13 @@ const controls = {
       { label: "Fantasy", gotoKey: "english_fantasy" },
       { label: "Adventure", gotoKey: "english_adventure" },
       { label: "Comedy", gotoKey: "english_comedy" },
-      { label: "Romance", gotoKey: "english_romance" },
+      { label: "Horror", gotoKey: "english_horror" },
       { label: "Crime", gotoKey: "english_crime" },
+      { label: "Mystery", gotoKey: "english_mystery" },
       { label: "Animation", gotoKey: "english_animation" },
       { label: "Thriller", gotoKey: "english_thriller" },
       { label: "Biography", gotoKey: "english_biography" },
+      {label : "Old classics", gotoKey:"english_old"},
       { label: "Random", gotoKey: "english_all_movies" },
     ],
   },
@@ -90,7 +92,6 @@ const controls = {
     options: [
       { label: "Action", gotoKey: "telugu_action" },
       { label: "Drama", gotoKey: "telugu_drama" },
-      { label: "Sci-Fi", gotoKey: "telugu_scifi" },
       { label: "Fantasy", gotoKey: "telugu_fantasy" },
       { label: "Adventure", gotoKey: "telugu_adventure" },
       { label: "Comedy", gotoKey: "telugu_comedy" },
@@ -106,18 +107,20 @@ const controls = {
   hindi: {
     response: `Fun Fact, ${getRandomFunFact("hindi")}`,
     options: [
-      { label: "Suspense", gotoKey: "hindi_suspense" },
+      
       { label: "Action", gotoKey: "hindi_action" },
       { label: "Drama", gotoKey: "hindi_drama" },
-      { label: "Sci-Fi", gotoKey: "hindi_scifi" },
+      { label: "Mystery", gotoKey: "hindi_mystery" },
       { label: "Fantasy", gotoKey: "hindi_fantasy" },
       { label: "Adventure", gotoKey: "hindi_adventure" },
+      { label: "Horror", gotoKey: "hindi_horror" },
       { label: "Comedy", gotoKey: "hindi_comedy" },
       { label: "Romance", gotoKey: "hindi_romance" },
       { label: "Crime", gotoKey: "hindi_crime" },
       { label: "Thriller", gotoKey: "hindi_thriller" },
       { label: "Biography", gotoKey: "hindi_biography" },
       { label: "Musical", gotoKey: "hindi_musical" },
+      { label: "Old classics", gotoKey: "hindi_old" },
       { label: "Random", gotoKey: "hindi_all_movies" },
     ],
   },
@@ -157,12 +160,6 @@ const controls = {
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22comedy%22",
   },
-  english_romance: {
-    response: "Great, I have these recommendations for you",
-    options: [],
-    recommendations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22romance%22",
-  },
   english_crime: {
     response: "Great, I have these recommendations for you",
     options: [],
@@ -193,6 +190,24 @@ const controls = {
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22",
   },
+  english_mystery: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22mystery%22",
+  },
+  english_horror: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22horror%22",
+  },
+  english_old: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22english%22&genres=%22old%22",
+  },
 
   telugu_action: {
     response: "Great, I have these recommendations for you",
@@ -205,12 +220,6 @@ const controls = {
     options: [],
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22drama%22",
-  },
-  telugu_scifi: {
-    response: "Great, I have these recommendations for you",
-    options: [],
-    recommendations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22scifi%22",
   },
   telugu_fantasy: {
     response: "Great, I have these recommendations for you",
@@ -266,8 +275,7 @@ const controls = {
     response:"That's great here are the New Movies released ",
     options:[],
     recommendations:
-    "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22old%22",
-    
+    "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22telugu%22&genres=%22old%22",  
   },
   telugu_all_movies: {
     response: "Great, I have these recommendations for you",
@@ -287,12 +295,6 @@ const controls = {
     options: [],
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22drama%22",
-  },
-  hindi_scifi: {
-    response: "Great, I have these recommendations for you",
-    options: [],
-    recommendations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22scifi%22",
   },
   hindi_fantasy: {
     response: "Great, I have these recommendations for you",
@@ -342,11 +344,23 @@ const controls = {
     recommendations:
       "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22biography%22",
   },
-  hindi_suspense: {
+  hindi_mystery: {
     response: "Great, I have these recommendations for you",
     options: [],
     recommendations:
-      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22suspense%22",
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22mystery%22",
+  },
+  hindi_horror: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22horror%22",
+  },
+  hindi_old: {
+    response: "Great, I have these recommendations for you",
+    options: [],
+    recommendations:
+      "https://cinebot-81244-default-rtdb.asia-southeast1.firebasedatabase.app/movies.json?orderBy=%22language%22&equalTo=%22hindi%22&genres=%22old%22",
   },
   hindi_all_movies: {
     response: "Great, I have these recommendations for you",

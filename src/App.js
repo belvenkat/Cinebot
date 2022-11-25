@@ -139,13 +139,15 @@ export default function App() {
 
   return (
     <div className="App">
-      <Card
+      {/* <Card
         style={{
           textAlign: "center",
         }}
-      >
+    
         <h1>CineBot </h1>
-      </Card>
+      </Card> */}
+      <Image src="https://raw.githubusercontent.com/belvenkat/Cinebot/updates/cinebot%20name.jpg"></Image>
+
       <Modal
         width={600}
         open={isModalOpen}
