@@ -112,14 +112,13 @@ const MovieCard = ({ selectedMovie }) => {
           }}
         >
           <MovieDetails label={"Actor Name"} value={actor_name} />
+          <MovieDetails label={"Actress Name"} value={actress_name} />
+          <MovieDetails label={"Director"} value={director} />
+          <MovieDetails label={"Music Director"} value={music_director} />
           <MovieDetails label={"Genres"} value={genres} />
           <MovieDetails label={"Category"} value={category} />
           <MovieDetails label={"IMDB"} value={imdb_rating} />
-          <MovieDetails label={"Music Director"} value={music_director} />
-          <MovieDetails label={"Director"} value={director} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
-          <MovieDetails label={"Actor Name"} value={actor_name} />
+          <MovieDetails label={"certification"} value={certification} />
         </div>
       </div>
       <div
