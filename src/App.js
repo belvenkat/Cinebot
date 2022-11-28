@@ -3,9 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import "antd/dist/antd.css";
 import {
   Button,
-  List,
   Card,
-  Avatar,
   Typography,
   Image,
   Modal,
@@ -77,7 +75,7 @@ export default function App() {
           };
         });
       }
-    } else {
+    } else if(isNaN(e.target.value) && e.target.value !="" ) { 
       setUserDetails((userDetails) => {
         return {
           ...userDetails,
@@ -217,7 +215,6 @@ export default function App() {
                           [option.gotoKey]: e.target.value,
                         };
                       });
-                      
                       handleSelection(option);
                     }}
                     onChange={(e) => handleUserTextInput(e, option)}
