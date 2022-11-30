@@ -30,7 +30,7 @@ const getRandomFunFact = (language) => {
 const controls = {
   start: {
     response:
-      "Hi! I'm CineBot your movie recommendtion system. May I know your name?",
+      "Hi! I'm CineBot your movie recommendation system. May I know your name?",
     options: [
       {
         label: "Hey CiniBot ! This is user_name",
