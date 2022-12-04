@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://www.cinebot.online",
+  "homepage": "https://cinebot22.github.io/Cinebot",
   "dependencies": {
     "antd": "4.23.6",
     "react": "18.2.0",
