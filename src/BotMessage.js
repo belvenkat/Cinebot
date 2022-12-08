@@ -23,8 +23,7 @@ const BotMessage = ({ text, user_name, user_age }) => {
         <Avatar
           src={
             <Image
-            src="https://drive.google.com/file/d/1B_J8ohZaSUih7lXuck9mTJORdJzMnMqT/view?usp=share_link"
-             // src="https://raw.githubusercontent.com/belvenkat/Cinebot/main/cinebot.jpg"
+             src="https://raw.githubusercontent.com/belvenkat/Cinebot/main/cinebot.jpg"
               style={{ width: 32 }}
             />
           }
